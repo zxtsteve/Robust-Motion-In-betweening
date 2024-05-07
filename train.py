@@ -101,7 +101,7 @@ def train():
             generator_optimizer.step()
 
         print("loss: ", loss_epoch / len(data) / 70)
-        # save_ckpt("rmi", state_encoder, lstm, decoder)
+        save_ckpt("rmi", state_encoder, lstm, decoder)
 
 
 def read_data(path, num_seq=0):
