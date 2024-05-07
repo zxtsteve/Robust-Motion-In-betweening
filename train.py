@@ -20,10 +20,10 @@ import shutil
 def train():
     # Data
     # data = read_data("D:/MyData/Boxing/1target+poses/len70_random-40+0_pose_in_target_joint", num_seq=100)
-    data = read_data("/home2/sgtn88/datasets/Boxing/len70_random-40+0_target_joint_space", num_seq=20000)
+    data = read_data("/home2/sgtn88/datasets/Boxing/len70_random-40+0_target_joint_space", num_seq=0)
 
     # Initializing networks
-    state_in = 234#*2 # root_v_dim + local_q_dim + contact_dim
+    state_in = 234*2 # root_v_dim + local_q_dim + contact_dim
     state_encoder = InputEncoder(input_dim=state_in)
     state_encoder.cuda()
 
@@ -64,7 +64,7 @@ def train():
         loss_epoch = 0
         for b in range(0, len(data), batch_size):
             _data = torch.cat([torch.tensor(s).unsqueeze(0) for s in data[b:b+batch_size]], dim=0).clone().detach()
-            _data = _data[:,:,6:240]
+            _data = torch.cat([_data[:,:,6:240], _data[:,:,246:480]], dim=2)
             current_batch_size = _data.shape[0]
             lstm.init_hidden(current_batch_size)
             loss_total = 0
