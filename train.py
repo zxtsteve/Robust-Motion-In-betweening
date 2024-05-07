@@ -20,7 +20,7 @@ import shutil
 def train():
     # Data
     # data = read_data("D:/MyData/Boxing/1target+poses/len70_random-40+0_pose_in_target_joint", num_seq=100)
-    data = read_data("/home2/sgtn88/datasets/Boxing/len70_random-40+0_target_joint_space", num_seq=0)
+    data = read_data("/home2/sgtn88/datasets/Boxing/len70_random-40+0_target_joint_space", num_seq=30000)
 
     # Initializing networks
     state_in = 234*2 # root_v_dim + local_q_dim + contact_dim
