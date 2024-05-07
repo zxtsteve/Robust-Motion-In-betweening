@@ -38,7 +38,7 @@ def connectUnity3d(state_encoder, lstm, decoder):
         state_input = target_space[:,-1].clone().detach()
         
         # encoder
-        h_state = state_encoder(state_input.clone().detach())
+        h_state = state_encoder(state_input[:,:234].clone().detach())
         
         # lstm
         h_in = h_state.unsqueeze(0)
@@ -46,7 +46,8 @@ def connectUnity3d(state_encoder, lstm, decoder):
 
         # decoder
         h_pred = decoder(h_out.squeeze(0))
-        toUnity_poses = h_pred[0]
+        # toUnity_poses = h_pred[0]
+        toUnity_poses = torch.cat([torch.zeros(6).cuda(), h_pred[0], torch.zeros(6).cuda(), h_pred[0]])
         
         send_bytes = serialize_from_tensor(toUnity_poses)
         # print(f"toUnity: {toUnity.shape}")
@@ -58,7 +59,7 @@ def connectUnity3d(state_encoder, lstm, decoder):
 def split(pose):
     char1, char2 = pose[:,:,:234*3+240], pose[:,:,234*3+240:]
     # target_space = torch.cat([char1[:,:,:234], char2[:,:,:234]], dim=2)
-    target_space = torch.cat([torch.zeros(1,1,6).cuda(), char1[:,:,:234], torch.zeros(1,1,6).cuda(), char2[:,:,:234]], dim=2)
+    target_space = torch.cat([char1[:,:,:234], char2[:,:,:234]], dim=2)
     world_space = torch.cat([char1[:,:,234:234*2], char2[:,:,234:234*2]], dim=2)
     cross_target_space = torch.cat([char1[:,:,234*2:234*3], char2[:,:,234*2:234*3]], dim=2)
     target = torch.cat([char1[:,-1:,234*3:234*3+240], char2[:,-1:,234*3:234*3+240]], dim=2)
@@ -84,7 +85,7 @@ def serialize_from_tensor(data):
 
 if __name__ == '__main__':
     # Initializing networks
-    state_in = 240*2 # root_v_dim + local_q_dim + contact_dim
+    state_in = 234 #*2 # root_v_dim + local_q_dim + contact_dim
     state_encoder = InputEncoder(input_dim=state_in)
     state_encoder.cuda()
 
