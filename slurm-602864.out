@@ -1,0 +1,204 @@
+Reading data from /home2/sgtn88/datasets/Boxing/len70_random-40+0_target_joint_space
+  0%|          | 0/100 [00:00<?, ?it/s]/home2/sgtn88/Robust-Motion-In-betweening/train.py:66: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  _data = torch.cat([torch.tensor(s).unsqueeze(0) for s in data[b:b+batch_size]], dim=0).clone().detach()
+  1%|          | 1/100 [02:48<4:38:44, 168.93s/it]  2%|▏         | 2/100 [05:34<4:32:28, 166.82s/it]  3%|▎         | 3/100 [08:19<4:28:31, 166.10s/it]  4%|▍         | 4/100 [11:05<4:25:26, 165.90s/it]  5%|▌         | 5/100 [13:50<4:22:33, 165.82s/it]  6%|▌         | 6/100 [16:36<4:19:37, 165.72s/it]  7%|▋         | 7/100 [19:21<4:16:48, 165.68s/it]  8%|▊         | 8/100 [22:07<4:14:02, 165.68s/it]  9%|▉         | 9/100 [24:53<4:11:21, 165.73s/it] 10%|█         | 10/100 [27:39<4:08:33, 165.71s/it] 11%|█         | 11/100 [30:24<4:05:45, 165.68s/it] 12%|█▏        | 12/100 [33:10<4:03:00, 165.69s/it] 13%|█▎        | 13/100 [35:56<4:00:16, 165.71s/it] 14%|█▍        | 14/100 [38:41<3:57:28, 165.68s/it] 15%|█▌        | 15/100 [41:27<3:54:36, 165.61s/it] 16%|█▌        | 16/100 [44:12<3:51:47, 165.57s/it] 17%|█▋        | 17/100 [46:58<3:49:01, 165.56s/it] 18%|█▊        | 18/100 [49:44<3:46:21, 165.62s/it] 19%|█▉        | 19/100 [52:29<3:43:35, 165.63s/it] 20%|██        | 20/100 [55:15<3:40:47, 165.59s/it] 21%|██        | 21/100 [58:00<3:37:58, 165.55s/it] 22%|██▏       | 22/100 [1:00:46<3:35:12, 165.55s/it] 23%|██▎       | 23/100 [1:03:31<3:32:32, 165.62s/it] 24%|██▍       | 24/100 [1:06:17<3:29:46, 165.62s/it] 25%|██▌       | 25/100 [1:09:03<3:27:01, 165.61s/it] 26%|██▌       | 26/100 [1:11:48<3:24:16, 165.63s/it] 27%|██▋       | 27/100 [1:14:29<3:19:46, 164.20s/it] 28%|██▊       | 28/100 [1:17:15<3:17:34, 164.64s/it] 29%|██▉       | 29/100 [1:20:00<3:15:07, 164.90s/it] 30%|███       | 30/100 [1:22:46<3:12:35, 165.08s/it] 31%|███       | 31/100 [1:25:32<3:10:02, 165.25s/it] 32%|███▏      | 32/100 [1:28:17<3:07:26, 165.38s/it] 33%|███▎      | 33/100 [1:31:03<3:04:49, 165.52s/it] 34%|███▍      | 34/100 [1:33:49<3:02:03, 165.51s/it] 35%|███▌      | 35/100 [1:36:34<2:59:15, 165.47s/it] 36%|███▌      | 36/100 [1:39:19<2:56:31, 165.49s/it] 37%|███▋      | 37/100 [1:42:06<2:54:11, 165.90s/it] 38%|███▊      | 38/100 [1:44:52<2:51:15, 165.73s/it] 39%|███▉      | 39/100 [1:47:37<2:48:24, 165.64s/it] 40%|████      | 40/100 [1:50:23<2:45:39, 165.66s/it] 41%|████      | 41/100 [1:53:08<2:42:49, 165.58s/it] 42%|████▏     | 42/100 [1:55:54<2:40:06, 165.63s/it] 43%|████▎     | 43/100 [1:58:40<2:37:21, 165.63s/it] 44%|████▍     | 44/100 [2:01:23<2:33:58, 164.98s/it] 45%|████▌     | 45/100 [2:04:09<2:31:28, 165.24s/it] 46%|████▌     | 46/100 [2:06:54<2:28:48, 165.35s/it] 47%|████▋     | 47/100 [2:09:40<2:26:06, 165.41s/it] 48%|████▊     | 48/100 [2:12:26<2:23:27, 165.54s/it] 49%|████▉     | 49/100 [2:15:11<2:20:41, 165.52s/it] 50%|█████     | 50/100 [2:17:57<2:17:55, 165.51s/it] 51%|█████     | 51/100 [2:20:43<2:15:18, 165.67s/it] 52%|█████▏    | 52/100 [2:23:29<2:12:32, 165.68s/it] 53%|█████▎    | 53/100 [2:26:14<2:09:44, 165.63s/it] 54%|█████▍    | 54/100 [2:29:00<2:07:00, 165.66s/it] 55%|█████▌    | 55/100 [2:31:45<2:04:14, 165.65s/it] 56%|█████▌    | 56/100 [2:34:31<2:01:27, 165.63s/it] 57%|█████▋    | 57/100 [2:37:17<1:58:42, 165.65s/it] 58%|█████▊    | 58/100 [2:40:02<1:55:57, 165.65s/it] 59%|█████▉    | 59/100 [2:42:48<1:53:09, 165.60s/it] 60%|██████    | 60/100 [2:45:33<1:50:24, 165.60s/it] 61%|██████    | 61/100 [2:48:19<1:47:40, 165.65s/it] 62%|██████▏   | 62/100 [2:51:05<1:44:54, 165.66s/it] 63%|██████▎   | 63/100 [2:53:50<1:42:07, 165.62s/it] 64%|██████▍   | 64/100 [2:56:34<1:39:02, 165.08s/it] 65%|██████▌   | 65/100 [2:59:20<1:36:23, 165.24s/it] 66%|██████▌   | 66/100 [3:02:05<1:33:39, 165.28s/it] 67%|██████▋   | 67/100 [3:04:51<1:30:57, 165.38s/it] 68%|██████▊   | 68/100 [3:07:36<1:28:12, 165.40s/it] 69%|██████▉   | 69/100 [3:10:22<1:25:27, 165.39s/it] 70%|███████   | 70/100 [3:13:07<1:22:40, 165.36s/it] 71%|███████   | 71/100 [3:15:52<1:19:55, 165.35s/it] 72%|███████▏  | 72/100 [3:18:38<1:17:11, 165.41s/it] 73%|███████▎  | 73/100 [3:21:24<1:14:28, 165.51s/it] 74%|███████▍  | 74/100 [3:24:09<1:11:42, 165.49s/it] 75%|███████▌  | 75/100 [3:26:54<1:08:56, 165.46s/it] 76%|███████▌  | 76/100 [3:29:40<1:06:12, 165.53s/it] 77%|███████▋  | 77/100 [3:32:26<1:03:27, 165.56s/it] 78%|███████▊  | 78/100 [3:35:11<1:00:43, 165.62s/it] 79%|███████▉  | 79/100 [3:37:57<57:57, 165.58s/it]   80%|████████  | 80/100 [3:40:43<55:11, 165.57s/it] 81%|████████  | 81/100 [3:43:28<52:26, 165.59s/it] 82%|████████▏ | 82/100 [3:46:14<49:40, 165.60s/it] 83%|████████▎ | 83/100 [3:48:59<46:55, 165.63s/it] 84%|████████▍ | 84/100 [3:51:45<44:09, 165.61s/it] 85%|████████▌ | 85/100 [3:54:31<41:24, 165.60s/it] 86%|████████▌ | 86/100 [3:57:16<38:38, 165.58s/it] 87%|████████▋ | 87/100 [4:00:01<35:51, 165.49s/it] 88%|████████▊ | 88/100 [4:02:47<33:05, 165.43s/it] 89%|████████▉ | 89/100 [4:05:32<30:19, 165.41s/it] 90%|█████████ | 90/100 [4:08:18<27:34, 165.46s/it] 91%|█████████ | 91/100 [4:11:03<24:49, 165.54s/it] 92%|█████████▏| 92/100 [4:13:49<22:04, 165.58s/it] 93%|█████████▎| 93/100 [4:16:35<19:19, 165.60s/it] 94%|█████████▍| 94/100 [4:19:20<16:33, 165.63s/it] 95%|█████████▌| 95/100 [4:21:57<13:34, 162.96s/it] 96%|█████████▌| 96/100 [4:24:30<10:39, 159.83s/it] 97%|█████████▋| 97/100 [4:27:02<07:52, 157.59s/it] 98%|█████████▊| 98/100 [4:29:34<05:11, 155.99s/it] 99%|█████████▉| 99/100 [4:32:07<02:34, 154.92s/it]100%|██████████| 100/100 [4:34:39<00:00, 154.10s/it]100%|██████████| 100/100 [4:34:39<00:00, 164.79s/it]
+loss:  3.009924603329613
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.8727411475771951
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.6083049651227679
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.4795833233351934
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.3891643566313245
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.329429776669457
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.2794433401343934
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.241286269763765
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.2093358911132812
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.1810324662853422
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.1600390370396205
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.1388678566778274
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.1235874218750002
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.1080379486955916
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0937797453962055
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.082851954403832
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0732296604120164
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0624164861769902
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0534040705217635
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0447188814290365
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0379886283365884
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.031991677652995
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0234566219656809
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0187865416317894
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0139786478097097
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  1.0574443303571428
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9955917466517856
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9942946756998698
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9939719742257255
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9887985426548549
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9858658093843007
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9838382747395832
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9785615864490327
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9765586296154203
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9729154132952008
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9689563754999069
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9664486969284785
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9643707884579612
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9610092745535713
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9599090397716704
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9544098368908109
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9545935078357514
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9511782138788133
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9485591552153088
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9462586991373698
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9458938927641369
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9425491866629465
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9393779793294271
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9406696695963542
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9364136108979726
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9354429553222656
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.93304055640811
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9324675594075521
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9309124206542969
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9280818509928385
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9289821110026042
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9764322627766928
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9188474410574776
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9187626078869049
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9220350860305059
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9223369549851191
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9211231032598586
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9198381093052456
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9189322846330916
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9178627409435454
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9168349085053943
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9146523185221355
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9151215140787762
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9130352747744606
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9137089555431548
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9106670251464843
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9108499083891369
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.910410459798177
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9079879090518043
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9085726473563057
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9073643593052455
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9050925019182477
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9047793065824963
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9043922800409226
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9060455678013393
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9029899328613281
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9027439148530506
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.902338497140067
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9002323960658483
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.9009656967889695
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8998055812290737
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8986189023553758
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8982894144694011
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8979878089541481
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8977765451195127
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8969853149414063
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8945762227376303
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8954760832868304
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8945145696730842
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8946187025669643
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8929385325985864
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8920852111816406
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8934662754022508
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8910706169782366
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
+loss:  0.8913391017368861
+Saved checkpoint to ./checkpoint/rmi/ckpt_last.pth.tar
